@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="//db.onlinewebfonts.com/c/d8a3c95906aec0c2483082a82e72cb40?family=WanderlustShine-Regular" rel="stylesheet" type="text/css"/>
+      
+    
+    <title>SMART FASHION RECOMMENDED APPLICATION</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+         @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+         @font-face{
+            font-family: Wanderlust;
+            src: url('/Wanderlust Letters-Font/OTF/WanderlustLetters-Regular.otf');
+            font-weight: bold;}
+*{
+    margin: 0;
+    padding: 0;
+   
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    text-align: center;
+   
+    background-color: #23242a;
+    color: #f2f2f2;
+    
+}
+
+
+          .navbar {
+            overflow: hidden;
+            
+          
+            position: fixed;
+            top: 0;
+            width: 100%;
+            }
+        .navbar a {
+        float: right;
+        display: block;
+        color: #21e231;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        }
+
+        .navbar a:hover {
+        background: #f2f2f2;
+        color: black;
+        }
+        .navbar h3{
+            padding: 12px 12px;
+            color: #21e231;
+            font-size: 5vh;
+            font-weight: 700;
+            top:0;
+            text-align: left;
+        }
+
+
+        .content {
+        width:100%;
+        height:100%;
+        display: table;
+        border:2px solid white;
+        }
+
+
+        .image{
+            width:5%;
+            height: 90%;
+            float: left;
+            padding: 2px;
+        }
+        .image img{
+            height: 46px;
+            width:80px;
+        }
+        .banner{
+            width: 100%;
+            height: 730px;
+            background-image: url("{{url_for('static',filename='background.png')}}");
+            background-attachment: fixed;
+            background-size: cover;
+        }   
+        .con{
+            text-align: center;
+            padding: 2%;
+        }
+        .con a{
+            color: #f2f2f2;
+            font-family: 'Poppins', sans-serif;
+            font-weight: bolder;
+            text-decoration: none;
+            background: #21e231;
+            padding: 5px;
+            border-radius: 10px;
+
+        }
+        .con a:hover{
+            background:#f2f2f2;
+            color: #21e231;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-weight: bolder;
+        }
+        .get{
+            margin: 20% 20%;
+        }
+        .about,.cart,.chatbot{
+            margin: 2%;
+            width: 90%;
+            height: 300px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            background-color: #111111;
+            transition: 0.3s;
+            padding: 1%;
+        }
+        .about:hover,.cart:hover,.chatbot:hover {
+            box-shadow: 0 8px 16px 0 rgb(52, 230, 28);
+            }
+
+        .left{
+          
+            width: 10%;
+            height: 100%;
+            float: left;
+            margin: 1%;
+            
+            
+            
+        }
+        .about img,.chatbot img{
+            width: 20%;
+            height: 85%;
+            float: left;
+            top: 0;
+            margin: 0% 6%;
+        }
+        .cart img{
+            width: 20%;
+            height: 85%;
+            float: right;
+            top: 0;
+            margin: 0% 6%;
+        }
+        .txt{
+           
+            width: 55%;
+            float: right;
+            text-align: justify;
+            margin: 4% 5%; 
+          
+
+        }
+
+    </style>
+
+</head>
+<body>
+        <div class="navbar">
+            <a href="/login">SIGN IN </a>
+            <div class="title">
+           <!-- <div class="image"> <img src="{{url_for('static', filename='logo.png')}}"></div> -->
+            <div><h3 style="right:0;font-family:'Lobster', cursive;">InfiniteArt </h3></div>
+            </div>
+     
+        </div>
+      <div class="banner">
+        <div class="con">
+        
+        <div class="get"><h1><span style="color:#21e231; ">SMART FASHION RECOMMENDER APPLICATION,</span> unlimitted access to all fashion items</h1><br>
+            <a href="/register"  name="get started">GET STARTED &#8594;</a></div>
+       </div>
+      </div>
+      <br>
+      <div class="about">
+        <center><h2>ABOUT</h2></center>
+             <img src="{{url_for('static',filename='about.png')}}">
+
+                <div class="txt">
+                    <p><h3 style="color:#21e231;">A warm welcome to your online fashion lane.</h3>
+
+                    We are aware of how much you value fashion and how much you enjoy online shopping's convenience. When you're on the go, the InfiniteArt online shopping app makes sure you don't miss out on a chic shopping experience. If you want to shop for clothing for men and women, shoes, accessories, or even the newest electronics and tech gadgets, InfiniteArt is always there to meet all of your style needs
+                </p></div>
+      
+      </div>
+      <div class="cart">
+        <center><h2>RECOMMENDATION&numsp;SYSTEM</h2></center>
+             <img src="{{url_for('static',filename='cart.png')}}">
+
+                <div class="txt">
+                    <p><h3 style="color:#21e231;">Your Favourite Items are here.</h3>
+
+                        Here, we used a recommendation system that is to categorise the user's clothing and suggest the best outfit for a particular occasion based on a recommendation algorithm. The suggested system demonstrates that it can analyse the user's attire from the images, determine the type and colour of the outfit, and then suggest the most appropriate outfit for the situation based on the user's current attire.
+                </p></div>
+      
+      </div>
+      <div class="chatbot">
+        <center><h2>CHATBOT</h2></center>
+             <img src="{{url_for('static',filename='chatbot.png')}}">
+
+                <div class="txt">
+                    <p><h3 style="color:#21e231;">Your Heleper Is Here.</h3>
+
+                        Chatbots can also be used to gather visitor data, which can then be used to improve product recommendations and suggestions. You can personalise product pages and increase customer loyalty and affinity by having a thorough understanding of customer inquiries, needs, and preferences. Chatbots can also inform customers when an item is out of stock, suggest suitable alternatives based on their preferences, and let them know when their order is expected to arrive.
+                </p></div>
+      
+      </div>
+      <div class="devlopers"></div>
+</body>
+</html>

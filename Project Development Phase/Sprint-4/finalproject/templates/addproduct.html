@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD PRODUCT</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/style.css')}}">
+    <style>
+ input[type="file"] {
+        position: absolute;
+        z-index: -1;
+        top: 10px;
+        left: 8px;
+        font-size: 17px;
+        color: #b8b8b8;
+      }
+      .button-wrap {
+        position: relative;
+      }
+      .button {
+        display: inline-block;
+        padding: 12px 18px;
+        cursor: pointer;
+        border-radius: 5px;
+        background-color:#45ff55;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+      }
+      option{
+        color: #fff;
+      }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/login">SIGN IN </a>
+        <a href="/register">SIGN UP</a>
+        <a href="/adminlogin">ADMIN</a>
+        <div class="title">
+            <h3  style="right:0;font-family:'Lobster', cursive;">InfiniteArt</h3>
+          </div>
+      </div>
+      <form method="post">
+        <div class="box">
+            <div class="form">
+                <h2>ADD PRODUCTS</h2>
+                
+                <div class="inputBox"  >
+                      
+                    <select name="cc" style="width: 100%;background:#45ff55;border:none;position: relative;height:45px;outline: none;color: aliceblue;border-radius: 4px;">
+                        <option value="shirt">SHIRT</option>
+                        <option value="pant">PANT</option>
+                        <option value="watch">WATCH</option>
+                        <option value="ring">RING</option>
+                    </select>
+    
+                </div>
+                <div class="inputBox"  >
+                    
+                    <input type="text" name="name"   required>
+                    <span  > <span class="font">NAME</span></span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                  <input type="text" name="rate" required>
+                  <span > <span class="font">RATE</span></span>
+                  <i></i>
+              </div>
+                <div class="inputBox">
+                    <input type="text" name="image" required>
+                    <span > <span class="font">IMAGE</span></span>
+                    <i></i>
+                </div>
+                <div class="inputBox"  >
+                  <input type="text" name="categorie" required>
+                  <span > <span class="font">categorie</span></span>
+                </div>
+                <br> 
+                
+                <input type="submit" value="enter">
+            </div>
+        </div>
+    </form>
+</body>
+</html>
