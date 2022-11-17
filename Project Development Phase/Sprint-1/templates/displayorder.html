@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+body{
+   min-height: 100vh;
+   background-color: #23242a;
+   
+}
+        table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  text-align: center;
+  margin: 5%;
+}
+
+tr:nth-child(odd){
+background-color: #21e231;
+color: white;
+}
+tr:nth-child(even){
+background-color: black;
+color: white;
+}
+.navbar {
+ overflow: hidden;
+ background:linear-gradient(-13deg, transparent,#45ff55,#21e231);
+ position: fixed;
+ top: 0;
+ width: 100%;
+ font-size: 3vh;
+}
+
+.navbar a {
+ float: right;
+ display: block;
+ color: #f2f2f2;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+ font-size: 17px;
+}
+
+.navbar a:hover {
+ background: #ddd;
+ color: black;
+}
+.title{
+   padding: 12px 12px;
+   color: #f2f2f2;
+}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/login">SIGN IN </a>
+        <a href="/register">SIGN UP</a>
+        <a href="/adminlogin">ADMIN</a>
+        <div class="title">
+            <h3  style="right:0;font-family:'Lobster', cursive;">InfiniteArt</h3>
+          </div>
+      </div>
+    <table style="width:90%">
+        <tr>
+          <th>ORDERNAME</th>
+          <th>IMAGE</th> 
+          <th>CATEGORIE</th>
+          <th>RATE</th>
+          
+        </tr>
+        {% for item in details %}
+        <tr>
+          <td>{{item.ONAME}}</td>
+          <td><img src="{{item.OIMAGE}}" width="20%" height="20%"></td>
+          <td>{{item.OCATEGORIE}}</td>
+          <td>{{item.ORATE}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+</body>
+</html>

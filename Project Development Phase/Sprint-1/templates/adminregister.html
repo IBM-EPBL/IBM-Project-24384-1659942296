@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/style.css')}}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/login">SIGN IN </a>
+        <a href="/register">SIGN UP</a>
+        <a href="/adminlogin">ADMIN</a>
+        <div class="title">
+            <h3  style="right:0;font-family:'Lobster', cursive;">InfiniteArt</h3>
+          </div>
+      </div>
+    <form method="post">
+        <div class="box">
+            <div class="form">
+                <h2>SIGN UP</h2>
+                
+                <div class="inputBox"  >
+                      
+                    <input type="text" name="username"   required>
+                    <span  class="fa fa-user"> <span class="font">Username</span></span>
+                    <i></i>
+                </div>
+                <div class="inputBox"  >
+                      
+                    <input type="email" name="email"   required>
+                    <span  class="fa fa-envelope"> <span class="font">Email</span></span>
+                    <i></i>
+                </div>
+                <div class="inputBox"  >
+                      
+                    <input type="text" name="phoneno"   required>
+                    <span  class="fa fa-phone"> <span class="font">PhoneNumber</span></span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input type="password" name="password" required>
+                    <span  class="fa fa-lock"> <span class="font">Password</span></span>
+                    <i></i>
+                </div>
+                <p>{{success}}</p>
+                <p style="color: red">{{error}}</p>
+                <div class="links">
+                    <a href="#">Forget password</a>
+                    <a href="/adminlogin">SIGN IN</a>
+                </div>
+                <input type="submit" value="Login">
+            </div>
+        </div>
+    </form>
+</body>
+</html>
