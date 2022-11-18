@@ -6,6 +6,9 @@ Smart Fashion Recommender Application
 TEAM MEMBERS:
   
   Mritthula B (Team Lead)
+  
   Neenasri S (Team Member 1)
+  
   Neya A (Team Member 2)
+  
   Pamuru Yamini (Team Member 3)
